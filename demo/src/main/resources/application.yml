@@ -1,6 +1,7 @@
 server:
   servlet:
     context-path: /api
+  port: $PORT
 spring:
   datasource:
     url: jdbc:postgresql://haxitkllyitchb:96a9b73d86e8ae1397e353195c07e82089244fa6b1810ada85f5ab45fde5196a@ec2-54-163-255-1.compute-1.amazonaws.com:5432/d9ilikcb97gf6o
