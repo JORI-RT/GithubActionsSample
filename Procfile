@@ -1,1 +1,1 @@
-web: java -jar demo/build/libs/demo-0.0.1-SNAPSHOT.jar
+web: java -jar -Dserver.port=$PORT demo/build/libs/demo-0.0.1-SNAPSHOT.jar --server.port=$PORT --spring.profiles.active=heroku
