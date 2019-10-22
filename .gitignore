@@ -55,6 +55,5 @@ out/
 ### VS Code ###
 .vscode/
 
-gradle
-.gradle
-.idea
+/.gradle/*
+/.idea/*
