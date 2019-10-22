@@ -1,0 +1,9 @@
+server:
+  servlet:
+    context-path: /api
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:15433/demoDb
+    username: demouser
+    password: demopass
+    driver-class-name: org.postgresql.Driver
