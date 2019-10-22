@@ -3,7 +3,14 @@ server:
     context-path: /api
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:15433/demoDb
-    username: demouser
-    password: demopass
+    url: jdbc:postgresql://ec2-54-163-255-1.compute-1.amazonaws.com
+  :5432/d9ilikcb97gf6o?sslmode=require
+    username: haxitkllyitchb
+    password: 96a9b73d86e8ae1397e353195c07e82089244fa6b1810ada85f5ab45fde5196a
     driver-class-name: org.postgresql.Driver
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:15433/demoDb
+#    username: demouser
+#    password: demopass
+#    driver-class-name: org.postgresql.Driver
