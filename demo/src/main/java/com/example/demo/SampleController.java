@@ -16,9 +16,9 @@ public class SampleController {
     JdbcTemplate jdbcTemplate;
 
     @GetMapping("/hello")
-    public String hello(){
+    public String hello() {
         String sql = "select * from hello where word='hello'";
-        return (String)jdbcTemplate.queryForList(sql).get(0).get("word");
+        return (String) jdbcTemplate.queryForList(sql).get(0).get("word");
     }
 
 }
