@@ -3,12 +3,12 @@ services:
     postgres:
         image: postgres:11.4
         ports:
-            - "15432:5432"
-        container_name: library.postgres
+            - "15433:5432"
+        container_name: demo.postgres
         environment:
-            POSTGRES_PASSWORD: libpass
-            POSTGRES_USER: libuser
-            POSTGRES_DB: library
+            POSTGRES_PASSWORD: demopass
+            POSTGRES_USER: demouser
+            POSTGRES_DB: demoDb
         hostname: postgres
         restart: always
 
@@ -16,9 +16,9 @@ services:
         image: dpage/pgadmin4:latest
         container_name: pgadmin4
         ports:
-            - 8000:80
+            - 8001:80
         volumes:
-            - ./pgadmin:/var/lib/pgadmin
+            - ./pgadmin:/var/demo/pgadmin
         environment:
             PGADMIN_DEFAULT_EMAIL: pgadmin
             PGADMIN_DEFAULT_PASSWORD: pgadmin
