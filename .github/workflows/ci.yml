@@ -22,10 +22,9 @@ jobs:
         ./gradlew build
     - name: Run test
       run: ./gradlew clean test
-    - run: echo `pwd`
     - run: |
-        cp /demo/build/libs/demo-0.0.1-SNAPSHOT.jar /deploy/
-        cd deploy
+        cp ./demo/build/libs/demo-0.0.1-SNAPSHOT.jar ./deploy/
+        cd ./deploy
         jar demo.zip *
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
