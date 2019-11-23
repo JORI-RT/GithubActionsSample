@@ -41,4 +41,4 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_ACCESS_KEY }}
       with:
-        args: s3 cp ./deploy/ dist/ s3://${{ secrets.AWS_S3_BUCKET }} --recursive
+        args: s3 cp ./deploy/ s3://${{ secrets.AWS_S3_BUCKET }} --recursive
