@@ -25,6 +25,7 @@ jobs:
     - run: |
         cp ./demo/build/libs/demo-0.0.1-SNAPSHOT.jar ./deploy/
         cd ./deploy
+        chmod 777 ./scripts/sample.sh
         jar -cMf demo.zip *
         rm -rf ./demo-0.0.1-SNAPSHOT.jar
         rm -rf ./scripts
