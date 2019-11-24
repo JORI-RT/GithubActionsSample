@@ -1,1 +1,1 @@
-nohup java -jar demo-0.0.1-SNAPSHOT.jar.jar
+nohup java -jar demo-0.0.1-SNAPSHOT.jar
