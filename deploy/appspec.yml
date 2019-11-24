@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+files:
+  - source: /demo-0.0.1-SNAPSHOT.jar
+    destination: /
+hooks:
+  ApplicationStart:
+    - location: scripts/nohup java -jar hogehoge.jar
+    - location: scripts/create_test_db.sh
+      timeout: 300
+      runas: root
