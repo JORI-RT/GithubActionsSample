@@ -5,6 +5,6 @@ files:
     destination: /
 hooks:
   ApplicationStart:
-    - location: scripts/nohup java -jar demo-0.0.1-SNAPSHOT.jar
+    - location: scripts/sample.sh
       timeout: 300
       runas: root
