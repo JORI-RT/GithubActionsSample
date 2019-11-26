@@ -20,6 +20,6 @@ phases:
       - rm -rf ./appspec.yml
 artifacts:
   files:
-    - target/my-app-1.0-SNAPSHOT.jar
+    - ./deploy/demo.zip
     - appspec.yml
   discard-paths: yes
