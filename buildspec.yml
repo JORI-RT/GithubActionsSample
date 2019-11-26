@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: openjdk11
+  build:
+    commands:
+      - echo Build started on `date`
+      - ./gradlew clean build
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - cp ./demo/build/libs/demo-0.0.1-SNAPSHOT.jar ./deploy/
+      - cd ./deploy
+      - chmod 777 ./scripts/sample.sh
+      - jar -cMf demo.zip *
+      - rm -rf ./demo-0.0.1-SNAPSHOT.jar
+      - rm -rf ./scripts
+      - rm -rf ./appspec.yml
+artifacts:
+  files:
+    - target/my-app-1.0-SNAPSHOT.jar
+    - appspec.yml
+  discard-paths: yes
